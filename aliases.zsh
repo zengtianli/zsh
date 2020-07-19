@@ -1,0 +1,58 @@
+alias av='source venv/bin/activate'
+alias c='clear'
+alias cdiff='colordiff'
+alias cs='calcurse'
+alias dv='deactivate'
+alias gc='git config credential.helper store'
+alias gg='git clone'
+alias Gpm='git push origin master'
+alias Gdc='git add .; git commit --amend --reuse-message HEAD'
+alias ipy='ipython'
+alias l='ls -la'
+alias lg='lazygit'
+alias ms='mailsync'
+alias mt='neomutt'
+alias r='echo $RANGER_LEVEL'
+alias pu='python3 -m pudb'
+alias ra='ranger'
+alias po='proxychains4'
+# ra() {
+	#if [ -z "$RANGER_LEVEL" ]
+	#then
+		#ranger
+	#else
+		#exit
+	#fi
+#}
+alias s='neofetch'
+alias g='onefetch'
+alias sra='sudo -E ranger'
+alias sudo='sudo -E'
+alias vim='nvim'
+alias gs='git config credential.helper store'
+alias bat='sudo tlp bat'
+alias ac='sudo tlp ac'
+alias gy='git-yolo'
+alias nb='newsboat -r'
+alias nt="source ~/.config/zsh/nt.sh"
+#alias nt="sh -c 'cd $(pwd); st' > /dev/null 2>&1 &"
+alias ta='tmux a'
+alias t='tmux'
+alias lo='lsof -p $(fps) +w'
+alias yta='proxychains4 youtube-dl -xci'
+alias yta0='po youtube-dl -xci -o "%(id)s.%(ext)s" '
+alias ytv='proxychains4 youtube-dl -ci'
+#alias cftp='curlftpfs 192.168.0.106:2211 ~/ftp'
+alias cftp='curlftpfs 192.168.0.110:2211 ~/ftp'
+alias za='nvim ~/.config/zsh/aliases.zsh; source ~/.config/zsh/aliases.zsh'
+alias zh='nvim ~/.zhistory'
+#alias ex='export http_proxy=socks5://127.0.0.1:1080;export https_proxy=socks5://127.0.0.1:1080'
+alias ex='source $T_SS/toggle_ex.sh'
+alias ss='cd ~/scripts'
+alias hcd='cd ~/blog; hexo clean && hexo deploy'
+#alias hs='cd ~/blog; hexo clean && hexo deploy'
+#alias blog='cd ~/blog/source/_posts/'
+alias za='nvim /home/tianli/.config/zsh/aliases.zsh; source /home/tianli/.config/zsh/aliases.zsh'
+alias nf='nvim `fzf`'
+#alias gdc='git add .;git commit --verbose --amend'
+alias lk='cd ~/.local/lk_bin'
