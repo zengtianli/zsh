@@ -99,11 +99,7 @@ function smart_vim() {
 alias vim=smart_vim
 alias addch="~/add_comment_header.sh"
 # zshrc 文件
-
-# 加载 .env 文件
 if [ -f "/Users/tianli/Documents/sync/zsh/env" ]; then
   source "/Users/tianli/Documents/sync/zsh/env"
 fi
-
-# 其他 zshrc 配置...
 
