@@ -1,0 +1,94 @@
+### UTILS
+# show utils commands and custom aliasses
+
+local helptxt="=== 🔍 文件搜索与管理 ===
+fif    [function]           在文件内容中搜索并用nvim打开
+preview [function]          快速查看文件内容(支持语法高亮)
+view   [modern]             智能文件查看器(自动选择工具)
+ff     [modern]             交互式文件查找和操作
+fdf    [modern]             fd (现代文件查找)
+
+=== 📁 文件列表与查看 ===
+ll     [modern]             eza -l --icons --group-directories-first  
+la     [modern]             eza -la --icons --group-directories-first
+lt     [modern]             eza -T -L 2 --icons (树形显示)
+lg     [modern]             eza -l --git --icons (显示Git状态)
+lsmart [modern]             智能目录列表(自动Git状态)
+cat    [modern]             bat (语法高亮查看文件)
+preview [modern]            bat --style=numbers --color=always
+
+=== 💾 磁盘与存储 ===
+disk_usage [function]       目录占用分析(dust/ncdu)
+du     [modern]             dust (可视化目录占用)
+df     [modern]             duf (彩色磁盘信息)
+
+=== ⚡ 进程与系统 ===
+process-tools [fzf]        统一进程管理工具箱
+ps     [modern]             procs (彩色进程列表)
+top    [modern]             btop (现代系统监控)
+sysinfo [function]          综合系统状态检查
+perf   [function]           快速性能诊断
+
+=== 🌐 网络工具 ===
+dig    [modern]             dog (友好的DNS查询)
+ping   [modern]             gping (图形化延迟)
+httpc  [modern]             httpie (人类友好HTTP)
+netcheck [function]         智能网络诊断
+portscan [function]         端口扫描工具
+
+=== 📦 包管理 ===
+brew-tools [fzf]           统一Homebrew管理工具箱
+
+=== 🔧 开发工具 ===
+j      [modern]             just (任务运行器)
+jl     [modern]             just --list (列出任务)
+bench  [modern]             hyperfine (基准测试)
+sdr    [modern]             sd (现代文本替换)
+yaml2json [function]        YAML转JSON
+json2yaml [function]        JSON转YAML
+project_init [function]     智能项目初始化
+serve  [function]           快速HTTP服务器
+modern-git [fzf]           Git工具集成
+
+=== 🔐 安全工具 ===
+send   [modern]             croc send (点对点文件传输)
+receive [modern]           croc (接收文件)
+encrypt [function]          age加密文件
+decrypt [function]          age解密文件
+
+=== 🛠️ 系统管理 ===
+check_modern_tools [function] 检查现代工具安装状态
+install_modern_tools [function] 安装推荐的现代工具
+toggle_modern_tools [function] 切换现代/传统工具模式
+config [function]           快速编辑配置文件
+backup [function]           快速备份重要文件
+
+=== 📊 数据处理 ===
+jf     [function]           JSON格式化和查询
+csv    [function]           CSV查看和处理
+psj    [function]           ps输出转JSON
+dfj    [function]           df输出转JSON
+lsj    [function]           ls输出转JSON
+
+=== 🎯 经典别名 ===
+lg     [alias]              lazygit
+ra     [alias]              yazi
+td     [alias]              todoist
+vim    [alias]              smart_vim
+rl     [alias]              source ~/.zshrc
+of     [alias]              open -a Finder ./
+ex     [alias]              export all_proxy=127.0.0.1:6152
+
+=== 🐍 Conda管理 ===
+conda_status [function]     查看Conda配置状态
+toggle_conda_mode [function] 切换Conda加载模式
+
+=== 💡 获取帮助 ===
+util   [function]           显示此帮助信息"
+
+local cmd=$(echo $helptxt | eval "fzf ${FZF_DEFAULT_OPTS} --header='[🛠️ 工具总览 - 大幅精简版] 12→4个FZF工具 19→9个配置文件' --height=80%" | awk '{print $1}')
+
+if [[ -n $cmd ]]; then
+  eval ${cmd}
+fi
+

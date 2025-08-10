@@ -1,0 +1,26 @@
+[user]
+    email = 34931204+zengtianli@users.noreply.github.com
+    name = tianli
+
+[http]
+	proxy = http://127.0.0.1:6152
+
+[https]
+	proxy = http://127.0.0.1:6152
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+[init]
+    defaultBranch = main
+
+[core]
+    autocrlf = input
+	pager = delta
+	excludesfile = /Users/tianli/.gitignore_global
+[delta]
+	line-numbers = true
+	side-by-side = true
