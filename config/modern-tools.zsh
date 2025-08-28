@@ -18,7 +18,7 @@ if [[ "$ZSH_USE_MODERN_TOOLS" == "true" ]]; then
   fi
 
   if command -v bat &> /dev/null; then
-    alias cat="bat"
+    # alias cat="bat"
     alias oldcat="/bin/cat"
     # 配置bat作为默认pager
     export PAGER="bat"
@@ -286,7 +286,7 @@ if [[ "$ZSH_USE_MODERN_TOOLS" == "true" ]]; then
       return 1
     fi
     
-    local file=$(fd --type f | fzf --preview 'preview {}' --header="[📁 选择文件进行 $action 操作]")
+    local file=$(fd --type f | fzf --preview 'bat --style=numbers --color=always {}' --header="[📁 选择文件进行 $action 操作]")
     
     if [[ -n "$file" ]]; then
       case $action in

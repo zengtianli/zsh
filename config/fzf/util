@@ -3,7 +3,6 @@
 
 local helptxt="=== 🔍 文件搜索与管理 ===
 fif    [function]           在文件内容中搜索并用nvim打开
-preview [function]          快速查看文件内容(支持语法高亮)
 view   [modern]             智能文件查看器(自动选择工具)
 ff     [modern]             交互式文件查找和操作
 fdf    [modern]             fd (现代文件查找)
@@ -15,7 +14,6 @@ lt     [modern]             eza -T -L 2 --icons (树形显示)
 lg     [modern]             eza -l --git --icons (显示Git状态)
 lsmart [modern]             智能目录列表(自动Git状态)
 cat    [modern]             bat (语法高亮查看文件)
-preview [modern]            bat --style=numbers --color=always
 
 === 💾 磁盘与存储 ===
 disk_usage [function]       目录占用分析(dust/ncdu)

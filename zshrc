@@ -55,3 +55,4 @@ eval "$(zoxide init zsh)"
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 alias showall='osascript -e "tell application \"System Events\" to set visible of every process to true"'
 alias hideall='osascript -e "tell application \"System Events\" to set visible of (every process whose name is not \"Finder\") to false"'
+alias cc='claude --dangerously-skip-permissions'
