@@ -1,3 +1,5 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # ============================================================================
 # ZSH Environment Setup (merged from zshenv and zprofile)
 # ============================================================================
@@ -51,8 +53,9 @@ eval "$(zoxide init zsh)"
 # Conda is now handled by the unified config/conda.zsh file
 # Set mode before loading if needed: export ZSH_CONDA_MODE="lazy"
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 alias showall='osascript -e "tell application \"System Events\" to set visible of every process to true"'
 alias hideall='osascript -e "tell application \"System Events\" to set visible of (every process whose name is not \"Finder\") to false"'
 alias cc='claude --dangerously-skip-permissions'
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
